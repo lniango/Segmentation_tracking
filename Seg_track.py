@@ -8,6 +8,7 @@ import os
 from PIL import Image
 import glob
 from skimage.feature import canny
+from skimage.filters import sobel
 from skimage import data,morphology
 from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
@@ -57,7 +58,27 @@ def canny_seg(nb=10):
         #plt.show()
 
 # Region segmentation
+def region_seg(nb=10):
+    for i in range(nb):
+        img_read = cv.imread(images[i])
+        img_read = np.array(cv.cvtColor(img_read, cv.COLOR_BGR2GRAY)) #Use gray image
+        
+        # Region Segmentation
+        # First we print the elevation map
+        elevation_map = sobel(img_read)
+        #plt.imshow(elevation_map, cmap='gray')
+        #plt.title('elevation map')
+        #plt.show()
 
+        # Since, the contrast difference is not much. Anyways we will perform it
+        markers = np.zeros_like(img_read)
+        #markers[img_read < float(50 / 255)] = 1 # 50/255
+        markers[img_read > float(120 / 255)] = 2 # 120/255
+        print(elevation_map)
+        #plt.imshow(markers, cmap='gray')
+        #plt.title('markers')
+        #plt.show()
 
-canny_seg()
+#canny_seg()
+region_seg()
 #print(os.path.join(save_path, f"binary-seg/seg_{1}.tif"))
