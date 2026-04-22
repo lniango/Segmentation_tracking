@@ -1,9 +1,6 @@
 *.tif
 DIC-C2DH-HeLa
+DIC-C2DH-HeLa-PNG/
+DIC-C2DH-HeLa-test-PNG/
 output
-*.png
-*.h5
-DIC-C2DH-HeLa-PNG
 __pycache__
-models
-.DS_Store
