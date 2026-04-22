@@ -1,4 +1,4 @@
-# You can find the dataset heare: https://celltrackingchallenge.net/2d-datasets/
+# You can find the dataset here: https://celltrackingchallenge.net/2d-datasets/
 # Open source project:  https://github.com/z-x-yang/Segment-and-Track-Anything
 # SAM2 segmentation model: https://github.com/hcmr-lab/Seg2Track-SAM2
 
