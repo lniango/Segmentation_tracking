@@ -6,3 +6,4 @@ output
 DIC-C2DH-HeLa-PNG
 __pycache__
 models
+.DS_Store
