@@ -4,3 +4,6 @@ DIC-C2DH-HeLa-PNG/
 DIC-C2DH-HeLa-test-PNG/
 output
 __pycache__
+*.h5
+*.png
+.DS_Store
