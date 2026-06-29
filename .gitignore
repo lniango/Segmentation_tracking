@@ -9,3 +9,5 @@ __pycache__
 *.DS_Store
 *.keras
 models
+models/.DS_Store
+.DS_Store
